@@ -1,0 +1,25 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8888/eureka
+spring:
+  application:
+    name: springcloudweb
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: config-server
+      profile: dev
+      label: master
+  rabbitmq:
+    host: 192.168.149.133
+    port: 5672
+    username: wangdou
+    password: admin
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh
+debug: true

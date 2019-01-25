@@ -1,0 +1,14 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: springcloudweb
+  thymeleaf:
+    mode: HTML5
+    encoding: UTF-8
+    content-type: text/html
+    cache: false
+  servlet:
+    multipart:
+      max-file-size: 5Mb
+      max-request-size: 10Mb
