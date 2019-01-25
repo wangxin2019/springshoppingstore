@@ -1,0 +1,29 @@
+server:
+  port: 8088
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri:
+          username:
+          password:
+          search-paths: serverconfig/*
+  rabbitmq:
+    host: 192.168.149.133
+    port: 5672
+    username: wangdou
+    password: admin
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:8888/eureka
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
